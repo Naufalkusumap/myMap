@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Peta Simpel 4 Basemap
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">PETA</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Dropdown Basemap -->
+  <div class="basemap-selector">
+    <label for="basemapSelect">Pilih Basemap:</label>
+    <select id="basemapSelect" (change)="onBasemapChange($event)">
+      <option value="topo-vector">Topo Vector</option>
+      <option value="streets">Streets</option>
+      <option value="satellite">Satellite</option>
+      <option value="hybrid">Hybrid</option>
+      <!-- Tambahkan pilihan basemap lainnya sesuai kebutuhan -->
+    </select>
+  </div>
+
+  <!-- Peta Container -->
+  <div id="container"></div>
+</ion-content>
